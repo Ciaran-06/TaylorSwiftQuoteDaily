@@ -4,6 +4,7 @@ let day;
 let date;
 let month;
 let quoteTextArea = document.getElementById("quote");
+let infoTextArea = document.getElementById("info");
 
 function init() {
     let d = new Date();
@@ -46,9 +47,12 @@ async function fetchQuote() {
         // The API call was successful!
         return response.json();
     }).then(function (data) {
-        //console.log(data);
+        console.log(data);
         console.log(data.quote)
-        quoteTextArea.innerText = data.quote
+        quoteTextArea.innerText = '"'+ data.quote + '"'
+
+        let formatedInfoString = '- "' + data.song + '" from "' + data.album + '"'
+        infoTextArea.innerText = formatedInfoString
        
     }).catch(function (err) {
         // There was an error
