@@ -64,11 +64,10 @@ body {
 @media only screen and (max-width: 1000px) {
     /* place here CSS for when the screen is less than 1000px wide */
     #header {
-        font-size: 24px;
+        font-size: 18px;
     }
-    
     #quote {
         padding-top: 2vh;
-        font-size: 12px;
+        font-size: 24px;
     }
   }
